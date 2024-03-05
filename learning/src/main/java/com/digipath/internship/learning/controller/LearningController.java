@@ -22,25 +22,24 @@ public class LearningController {
 
     @GetMapping(path = "/greeting")
     public String greeting(){
-        return "Greetings from learning controller";
+        return learningFacade.greetFromLF();
     }
 
     //Path Variable
     @GetMapping(path = "/data/path-var/{inputString}")
     public String dataPathVar(@PathVariable String inputString){
-        return inputString + "!!!!!!";
+        return learningFacade.dataPath(inputString);
     }
 
     //Query Parameter
     @GetMapping(path = "/data/query-param")
     public String dataQueryParam(@RequestParam(required = false, defaultValue = "10") Integer num){
-        return "The number is: " + num;
+        return learningFacade.dataQuery(num);
     }
 
     //Request Body
     @PostMapping(path = "/data/req-body")
     public PersonRequest dataReqBody(@RequestBody PersonRequest person){
-        person.setName("Name 2");
-        return person;
+        return learningFacade.dataReq(person);
     }
 }
