@@ -1,5 +1,6 @@
 package com.digipath.internship.learning.facade;
 
+import com.digipath.internship.learning.api.request.LPersonRequest;
 import com.digipath.internship.learning.api.request.PersonRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,7 @@ public class LearningFacadeImpl implements LearningFacade {
     }
 
     @Override
-    public PersonRequest dataReq(PersonRequest person) {
+    public LPersonRequest dataReq(LPersonRequest person) {
         person.setName("Name 2");
         return person;
     }

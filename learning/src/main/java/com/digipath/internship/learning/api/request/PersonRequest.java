@@ -7,6 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonRequest {
-    private String name;
+    private String fName;
+    private String lName;
     private String email;
+    private String SSN;
 }

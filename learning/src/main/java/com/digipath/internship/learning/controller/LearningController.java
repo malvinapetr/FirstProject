@@ -1,5 +1,6 @@
 package com.digipath.internship.learning.controller;
 
+import com.digipath.internship.learning.api.request.LPersonRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +40,7 @@ public class LearningController {
 
     //Request Body
     @PostMapping(path = "/data/req-body")
-    public PersonRequest dataReqBody(@RequestBody PersonRequest person){
+    public LPersonRequest dataReqBody(@RequestBody LPersonRequest person){
         return learningFacade.dataReq(person);
     }
 }

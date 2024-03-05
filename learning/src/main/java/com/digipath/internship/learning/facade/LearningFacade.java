@@ -1,6 +1,6 @@
 package com.digipath.internship.learning.facade;
 
-import com.digipath.internship.learning.api.request.PersonRequest;
+import com.digipath.internship.learning.api.request.LPersonRequest;
 
 public interface LearningFacade {
     String greet();
@@ -10,5 +10,5 @@ public interface LearningFacade {
 
     String dataQuery(Integer num);
 
-    PersonRequest dataReq(PersonRequest person);
+    LPersonRequest dataReq(LPersonRequest person);
 }
